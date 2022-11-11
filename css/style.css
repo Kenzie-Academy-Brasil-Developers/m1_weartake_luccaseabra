@@ -1,0 +1,162 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 101%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(187, 187, 187);
+    height: 45px;
+    margin-bottom: 40px;
+}
+
+.menuContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.elementsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menuItem{
+    margin: 5px;
+    padding:5px;
+    list-style: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:100%;
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+.vitrine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 67%;
+
+
+}
+.card{
+    border: solid #F5F5F5 2px;
+    height: 350px;
+    width: 220px;
+    margin: 0 20px 10px 0;
+    
+}
+.card img{
+    width: 100%;
+    background-color: #F5F5F5;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:5px;
+    margin:0;
+}
+.info .tag{
+    background-color: #2E245E;
+    padding:2px 7px;
+    border-radius: 2px;
+    color:white;
+}
+.nameItem, .description, .value, .addToCar{
+    margin: 5px 0;
+}
+
+.nameItem{
+    font-size: 20px;
+}
+
+.description{
+    font-size: 14px;
+}
+.value{
+    font-weight: bold;
+}
+
+.addToCar{
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 3px 1px;
+    transition: 2ms;
+}
+.addToCar:hover{
+    background-color: #2E245E;
+    color:white;
+}
+
+/* Aside */
+
+.aside{
+    width: 28%;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+input, button{
+    border-radius: 0;
+    border: none;
+
+}
+
+.input{
+    height: 30px;
+    width: 70%;
+    background-color: #F5F5F5;
+}
+/* .input:focus{
+    border-radius: 0;
+    border:#37268C solid 2px;
+} */
+
+.btnSearch{
+    width: 28%;
+    background-color: #37268C;
+    color:white;
+    cursor: pointer;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #37268C;
+    height: 35px;
+    color:white;
+    font-size: 20px;
+}
+
+.produtosCarrinho{
+    margin:0;
+    min-height: 160px;
+    background-color: #F5F5F5;
+}
