@@ -4,10 +4,7 @@ body{
     /* font-family: 'Merriweather Sans', sans-serif; */
 }
 
-body{
-    padding: 0;
-    margin: 0;
-}
+
 header{
     width: 101%;
     display: flex;
@@ -68,7 +65,7 @@ header{
 main{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     width:100%;
     max-width: 1200px;
@@ -80,7 +77,7 @@ main{
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 67%;
+    width: 70%;
 
 
 }
@@ -88,7 +85,7 @@ main{
     border: solid #F5F5F5 2px;
     height: 350px;
     width: 240px;
-    margin: 0 20px 15px 0;
+    margin: 0 25px 15px 0;
     transition: 0.5s;
 }
 .card:hover{
@@ -108,17 +105,17 @@ main{
 }
 .info .tag{
     background-color: #2E245E;
-    padding:2px 5px;
+    padding:5px 5px;
     border-radius: 2px;
     color:white;
-    font-size: 12px;
+    font-size: 10px;
 }
 .nameItem, .description, .value, .addToCar{
     margin: 7px;
 }
 
 .nameItem{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -143,7 +140,8 @@ main{
 /* Aside */
 
 .aside{
-    width: 30%;
+    width: 25%;
+    min-width: 209px;
 }
 
 form{
@@ -186,8 +184,80 @@ input, button{
     font-size: 20px;
 }
 
-.produtosCarrinho{
-    margin:0;
-    min-height: 160px;
+.produtosCarrinhoVazio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    min-height: 150px;
     background-color: #F5F5F5;
 }
+div.avisoCarrinho{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.avisoCarrinho h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.produtosCarrinhoCheio{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    min-height: 200px;
+    max-height: 280px;
+    background-color: #F5F5F5;
+}
+
+.carrinhoScroll{
+    overflow-y: scroll;
+}
+
+li.itemCarrinho{
+    padding: 10px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1px;
+    
+}
+
+img.imgCar{
+    background-color: white;
+    width: 25%;
+    margin-right: 15px;
+}
+
+.itemCarInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.itemCarName, .itemCarPrice{
+    margin-bottom: 10px;
+}
+.itemCarName{
+    font-size: 15px;
+}
+
+.itemCarPrice{
+    font-size: 12px;
+}
+
+button.btnRemove{
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    transition: 0.5s
+}
+
+button.btnRemove:hover{
+    background-color: rgba(238, 62, 62, 0.738);
+}
+
+
+

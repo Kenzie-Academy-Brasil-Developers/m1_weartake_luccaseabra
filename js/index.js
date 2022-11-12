@@ -30,6 +30,7 @@ function printVitrine(array){
         
         let addToCar = document.createElement('p')
         addToCar.classList.add('addToCar');
+        addToCar.setAttribute('id', 'btn_' + product.id)
         addToCar.innerText = product.addCart;
     
         divInfo.appendChild(tag);
@@ -77,9 +78,83 @@ elementsContainer.addEventListener('click', function(e){
         let btn = menuBtn[i];
         btn.classList.remove('selectedItem')
     }
-    e.target.classList.add('selectedItem')
+    e.target.classList.add('selectedItem');
     
 });
 
+
+
+/* CARRINHO VAZIO E CARRINHO CHEIO */
+let produtosCarrinho = document.querySelector('.produtosCarrinho');
+
+let addButtons = document.querySelectorAll('.addToCar');
+
+let carList = [];
+
+
+function printCar(){
+    produtosCarrinho.innerHTML = '';
+
+    if(carList.length < 1){
+
+        produtosCarrinho.classList.remove('produtosCarrinhoCheio')
+        produtosCarrinho.classList.add('produtosCarrinhoVazio')
+
+        produtosCarrinho.insertAdjacentHTML('afterbegin', `
+            <div class="avisoCarrinho">
+                <h1 class="carrinhoVazio">Carrinho vazio</h1>
+                <small class="adicioneItens">Adicione itens</small>
+            </div>`
+        );
+
+    }else{
+
+        produtosCarrinho.classList.remove('produtosCarrinhoVazio')
+        produtosCarrinho.classList.add('produtosCarrinhoCheio')
+
+        for(let i = 0; i < carList.length; i++){
+            let produto = carList[i];
+            produtosCarrinho.insertAdjacentHTML('beforeend',
+                `<li class="itemCarrinho">
+                    <img src=${produto.img} alt=${produto.img} class="imgCar">
+                    <div class="itemCarInfo">
+                        <p class="itemCarName">${produto.nameItem}</p>
+                        <p class="itemCarPrice">R$ ${produto.value.toFixed(2).replace('.',',')}</p>
+                        <button id = 'car_${produto.id}' class="btnRemove">Remover produto</button>
+                    </div>
+                </li>`
+            );
+        }
+        if(carList.length > 3){
+            produtosCarrinho.classList.add('carrinhoScroll')
+        }
+
+    }
+}
+printCar();
+
+
+for(let i = 0; i < addButtons.length; i++){
+    let botao = addButtons[i];
+    botao.addEventListener('click', function(){
+        let idSelected = botao.id.substring(4);
+        let produto = procurarProduto(idSelected);
+        carList.push(produto);
+
+        printCar();
+
+    })
+}
+
+
+function procurarProduto(idSelected){
+    for(let i = 0; i < data.length; i++){
+        let produto = data[i];
+        if(idSelected == produto.id){
+            return produto;
+        }
+    }
+    return 'Produto não encontrado'
+}
 
 
