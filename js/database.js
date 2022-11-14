@@ -7,7 +7,7 @@ const data = [
     nameItem: "Lightweight Jacket",
     description:
       "Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...",
-    value: 100,
+    value: 320,
     addCart: "Adicionar ao carrinho",
     tag: ["Camisetas"],
   },
@@ -17,7 +17,7 @@ const data = [
     nameItem: "Black Hat",
     description:
       "O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que...",
-    value: 100,
+    value: 90,
     addCart: "Adicionar ao carrinho",
     tag: ["Acessórios"],
   },
@@ -37,7 +37,7 @@ const data = [
     nameItem: "T-Shirt",
     description:
       "Esta t-shirt é imprescindível no seu guarda-roupa, combinando o caimento intemporal de...",
-    value: 100,
+    value: 150,
     addCart: "Adicionar ao carrinho",
     tag: ["Camisetas"],
   },
@@ -47,7 +47,7 @@ const data = [
     nameItem: "Short-Sleeve T-Shirt",
     description:
       "Agora você encontrou a camiseta básica do seu guarda-roupa. É feito de um mais grosso...",
-    value: 100,
+    value: 150,
     addCart: "Adicionar ao carrinho",
     tag: ["Camisetas"],
   },
@@ -57,7 +57,7 @@ const data = [
     nameItem: "Champion Packable Jacket",
     description:
       "Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...",
-    value: 100,
+    value: 350,
     addCart: "Adicionar ao carrinho",
     tag: ["Camisetas"],
   },
